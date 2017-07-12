@@ -322,15 +322,21 @@ input[type="button"] {
 
 header {
   background-color: #7FDBFF;
-  color: #FF4136; }
+  color: #FF4136;
+  box-shadow: 0px 2px #0074D9;
+  margin-bottom: 2px; }
 
 footer {
   background-color: #7FDBFF;
-  color: #FF4136; }
+  color: #FF4136;
+  box-shadow: 0px -2px #0074D9;
+  margin-top: 2px; }
 
 #poster {
   background-color: #FFFACD;
-  overflow: hidden; }
+  overflow: hidden;
+  margin-bottom: 2px;
+  box-shadow: 0px 2px #fff178; }
   #poster img {
     margin-bottom: -40px;
     max-width: 100%; }
@@ -343,3 +349,38 @@ footer {
     font-size: 30px;
     margin-top: 70px !important;
     margin-left: auto !important; } }
+
+#products {
+  background-color: #FFEFD5; }
+  #products figure {
+    background-color: #FAFAD2;
+    border-radius: 10px;
+    border: solid 2px #FFDAB9; }
+    #products figure img {
+      max-width: 100%;
+      padding: 10px 30px 30px;
+      border-bottom: solid 2px #FFDAB9; }
+      #products figure img:hover {
+        animation-name: shake;
+        animation-duration: 0.82s;
+        animation-delay: 0s;
+        animation-direction: normal;
+        animation-fill-mode: both;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-in-out;
+        transform: translate3d(0, 0, 0);
+        perspective: 1000px; }
+    #products figure figcaption {
+      text-align: center;
+      font-size: 17px;
+      color: red; }
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0); }
+  20%, 80% {
+    transform: translate3d(2px, 0, 0); }
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0); }
+  40%, 60% {
+    transform: translate3d(4px, 0, 0); } }
