@@ -33,7 +33,7 @@ gulp.task('browser-sync', function() {
 });
 
 gulp.task('sass', function () {
-  return gulp.src('./src/assets/sass//main.sass')
+  return gulp.src('./src/assets/sass/main.sass')
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer({
         browsers: ['last 2 versions'],

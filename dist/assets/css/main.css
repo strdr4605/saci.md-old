@@ -323,3 +323,23 @@ input[type="button"] {
 header {
   background-color: #7FDBFF;
   color: #FF4136; }
+
+footer {
+  background-color: #7FDBFF;
+  color: #FF4136; }
+
+#poster {
+  background-color: #FFFACD;
+  overflow: hidden; }
+  #poster img {
+    margin-bottom: -40px;
+    max-width: 100%; }
+  #poster .slogan {
+    margin-top: 140px;
+    margin-left: 50px; }
+
+@media screen and (max-width: 767px) {
+  .slogan {
+    font-size: 30px;
+    margin-top: 70px !important;
+    margin-left: auto !important; } }
