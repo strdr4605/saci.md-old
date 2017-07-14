@@ -1,15 +1,29 @@
 #products
-  background-color: $products-bg
+  border-bottom: solid 20px $white
+
+  .container
+    background-color: $bg
 
   figure
-    background-color: $product-bg
-    border-radius: 10px
-    border: solid 2px $border
+    position: relative
+    background-color: $silver
+    border-radius: 2px
+    overflow: hidden
+    opacity: 0
+    transform: translateX(30px)
+    transition: all 0.3s ease-in-out
+
+    &.is-showing
+      opacity: 1
+      transform: translateX(0px)
+
+    &:hover
+      figcaption
+        left: 0%
 
     img
       max-width: 100%
       padding: 10px 30px 30px
-      border-bottom: solid 2px $border
 
       &:hover
         animation-name: shake
@@ -24,11 +38,16 @@
 
 
     figcaption
+      position: absolute
       text-align: center
       font-size: 17px
-      color: red
-
-
+      font-weight: bold
+      color: white
+      background: black
+      bottom: 10px
+      left: -100%
+      padding: 2px 8px 2px 15px
+      transition: all 0.3s ease-in-out
 
 @keyframes shake
   10%, 90%
@@ -39,3 +58,7 @@
     transform: translate3d(-4px, 0, 0)
   40%, 60%
     transform: translate3d(4px, 0, 0)
+
+@media screen and (max-width: 1024px)
+  figcaption
+    left: 0% !important

@@ -198,7 +198,7 @@ th {
   padding: 0; }
 
 body {
-  background-color: white;
+  background-color: #fff;
   font-size: 14px;
   line-height: 1.6;
   font-family: 'Fira Sans', sans-serif;
@@ -321,45 +321,67 @@ input[type="button"] {
     outline: 0; }
 
 header {
-  background-color: #7FDBFF;
-  color: #FF4136;
-  box-shadow: 0px 2px #0074D9;
+  background-color: #333;
+  color: #fff;
+  border-bottom: solid 20px #fff;
   margin-bottom: 2px; }
+  header h2, header h3 {
+    color: #fff; }
 
 footer {
-  background-color: #7FDBFF;
+  background-color: #333;
   color: #FF4136;
-  box-shadow: 0px -2px #0074D9;
+  box-shadow: 0px -2px #aaa;
   margin-top: 2px; }
+  footer h5, footer h6 {
+    color: #fff; }
+  footer .powered-by div, footer .powered-by .company {
+    margin-top: 5px; }
+  footer .copyright {
+    margin-top: 20px; }
 
 #poster {
-  background-color: #FFFACD;
   overflow: hidden;
-  margin-bottom: 2px;
-  box-shadow: 0px 2px #fff178; }
-  #poster img {
+  border-bottom: solid 20px #fff;
+  background-color: #fafafa; }
+  #poster img.poster {
     margin-bottom: -40px;
     max-width: 100%; }
   #poster .slogan {
     margin-top: 140px;
     margin-left: 50px; }
+    #poster .slogan h1 {
+      margin-bottom: 20px; }
 
 @media screen and (max-width: 767px) {
   .slogan {
-    font-size: 30px;
-    margin-top: 70px !important;
-    margin-left: auto !important; } }
+    margin-top: 50px !important;
+    margin-left: auto !important; }
+    .slogan h1 {
+      font-size: 30px; }
+    .slogan h4 {
+      font-size: 17px; } }
 
 #products {
-  background-color: #FFEFD5; }
+  border-bottom: solid 20px #fff; }
+  #products .container {
+    background-color: #fafafa; }
   #products figure {
-    background-color: #FAFAD2;
-    border-radius: 10px;
-    border: solid 2px #FFDAB9; }
+    position: relative;
+    background-color: #ddd;
+    border-radius: 2px;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateX(30px);
+    transition: all 0.3s ease-in-out; }
+    #products figure.is-showing {
+      opacity: 1;
+      transform: translateX(0px); }
+    #products figure:hover figcaption {
+      left: 0%; }
     #products figure img {
       max-width: 100%;
-      padding: 10px 30px 30px;
-      border-bottom: solid 2px #FFDAB9; }
+      padding: 10px 30px 30px; }
       #products figure img:hover {
         animation-name: shake;
         animation-duration: 0.82s;
@@ -371,9 +393,16 @@ footer {
         transform: translate3d(0, 0, 0);
         perspective: 1000px; }
     #products figure figcaption {
+      position: absolute;
       text-align: center;
       font-size: 17px;
-      color: red; }
+      font-weight: bold;
+      color: white;
+      background: black;
+      bottom: 10px;
+      left: -100%;
+      padding: 2px 8px 2px 15px;
+      transition: all 0.3s ease-in-out; }
 
 @keyframes shake {
   10%, 90% {
@@ -384,3 +413,15 @@ footer {
     transform: translate3d(-4px, 0, 0); }
   40%, 60% {
     transform: translate3d(4px, 0, 0); } }
+
+@media screen and (max-width: 1024px) {
+  figcaption {
+    left: 0% !important; } }
+
+section#map {
+  border-bottom: solid 20px #fff; }
+  section#map .container {
+    background-color: #fafafa; }
+    section#map .container iframe {
+      padding: 10px;
+      width: 100%; }
