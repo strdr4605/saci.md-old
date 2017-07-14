@@ -379,10 +379,10 @@ footer {
       transform: translateX(0px); }
     #products figure:hover figcaption {
       left: 0%; }
-    #products figure img {
+    #products figure img.bag {
       max-width: 100%;
-      padding: 10px 30px 30px; }
-      #products figure img:hover {
+      padding: 10px 50px 50px; }
+      #products figure img.bag:hover {
         animation-name: shake;
         animation-duration: 0.82s;
         animation-delay: 0s;
@@ -399,10 +399,36 @@ footer {
       font-weight: bold;
       color: white;
       background: black;
-      bottom: 10px;
+      bottom: 30px;
       left: -100%;
       padding: 2px 8px 2px 15px;
       transition: all 0.3s ease-in-out; }
+    #products figure .width {
+      position: absolute;
+      bottom: 10px;
+      left: 25%; }
+      #products figure .width img {
+        padding: 0;
+        width: 20%; }
+      #products figure .width span {
+        padding: 0px 10px;
+        font-size: 20px; }
+    #products figure .height {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-flow: column;
+      flex-flow: column;
+      -ms-flex-align: center;
+      align-items: center;
+      position: absolute;
+      right: 20px;
+      bottom: 35%; }
+      #products figure .height img {
+        height: 60px;
+        padding: 0; }
+      #products figure .height span {
+        padding: 10px 0px;
+        font-size: 20px; }
 
 @keyframes shake {
   10%, 90% {
@@ -416,7 +442,22 @@ footer {
 
 @media screen and (max-width: 1024px) {
   figcaption {
-    left: 0% !important; } }
+    left: 0% !important; }
+  .height img {
+    height: 40px !important; } }
+
+@media screen and (max-width: 767px) {
+  figcaption {
+    font-size: 13px !important;
+    bottom: 100px !important; }
+  .width {
+    width: 50%; }
+    .width span {
+      font-size: 13px !important; }
+  .height img {
+    height: 25px !important; }
+  .height span {
+    font-size: 13px !important; } }
 
 section#map {
   border-bottom: solid 20px #fff; }

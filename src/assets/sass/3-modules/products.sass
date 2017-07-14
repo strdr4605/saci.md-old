@@ -21,9 +21,9 @@
       figcaption
         left: 0%
 
-    img
+    img.bag
       max-width: 100%
-      padding: 10px 30px 30px
+      padding: 10px 50px 50px
 
       &:hover
         animation-name: shake
@@ -44,10 +44,40 @@
       font-weight: bold
       color: white
       background: black
-      bottom: 10px
+      bottom: 30px
       left: -100%
       padding: 2px 8px 2px 15px
       transition: all 0.3s ease-in-out
+
+    .width
+      position: absolute
+      bottom: 10px
+      left: 25%
+
+      img
+        padding: 0
+        width: 20%
+
+      span
+        padding: 0px 10px
+        font-size: 20px
+
+    .height
+      display: flex
+      flex-flow: column
+      align-items: center
+      position: absolute
+      right: 20px
+      bottom: 35%
+
+      img
+        height: 60px
+        padding: 0
+
+      span
+        padding: 10px 0px
+        font-size: 20px
+
 
 @keyframes shake
   10%, 90%
@@ -62,3 +92,27 @@
 @media screen and (max-width: 1024px)
   figcaption
     left: 0% !important
+
+  .height
+
+    img
+      height: 40px !important
+
+@media screen and (max-width: 767px)
+  figcaption
+    font-size: 13px !important
+    bottom: 100px !important
+
+  .width
+    width: 50%
+
+    span
+      font-size: 13px !important
+
+  .height
+
+    img
+      height: 25px !important
+
+    span
+      font-size: 13px !important
