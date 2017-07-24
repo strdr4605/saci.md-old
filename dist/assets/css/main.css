@@ -229,7 +229,7 @@ body {
 
 a {
   color: #0074D9;
-  text-decoration: none;
+  text-decoration: none !important;
   outline: 0; }
   a:hover, a:focus {
     color: #40a6ff; }
@@ -325,8 +325,25 @@ header {
   color: #fff;
   border-bottom: solid 20px #fff;
   margin-bottom: 2px; }
-  header h2, header h3 {
+  header h2 {
     color: #fff; }
+  header .menu {
+    margin-top: 20px;
+    list-style: none;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row;
+    flex-flow: row;
+    font-size: 25px;
+    padding: 0; }
+    header .menu li {
+      margin: 0px 20px; }
+
+@media screen and (max-width: 767px) {
+  .menu {
+    float: left !important;
+    -ms-flex-flow: column !important;
+    flex-flow: column !important; } }
 
 footer {
   background-color: #333;
@@ -370,15 +387,18 @@ footer {
     position: relative;
     background-color: #ddd;
     border-radius: 2px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     overflow: hidden;
     opacity: 0;
-    transform: translateX(30px);
-    transition: all 0.3s ease-in-out; }
+    transform: translateX(30px); }
     #products figure.is-showing {
       opacity: 1;
       transform: translateX(0px); }
-    #products figure:hover figcaption {
-      left: 0%; }
+    #products figure:hover {
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
+      #products figure:hover figcaption {
+        left: 0%; }
     #products figure img.bag {
       max-width: 100%;
       padding: 10px 50px 50px; }
@@ -421,7 +441,7 @@ footer {
       -ms-flex-align: center;
       align-items: center;
       position: absolute;
-      right: 20px;
+      right: 0px;
       bottom: 35%; }
       #products figure .height img {
         height: 60px;
@@ -434,11 +454,11 @@ footer {
   10%, 90% {
     transform: translate3d(-1px, 0, 0); }
   20%, 80% {
-    transform: translate3d(2px, 0, 0); }
+    transform: translate3d(1px, 0, 0); }
   30%, 50%, 70% {
-    transform: translate3d(-4px, 0, 0); }
+    transform: translate3d(-2px, 0, 0); }
   40%, 60% {
-    transform: translate3d(4px, 0, 0); } }
+    transform: translate3d(2px, 0, 0); } }
 
 @media screen and (max-width: 1024px) {
   figcaption {
