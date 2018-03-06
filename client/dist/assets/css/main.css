@@ -486,3 +486,10 @@ section#map {
     section#map .container iframe {
       padding: 10px;
       width: 100%; }
+
+section#info_poster {
+  border-bottom: solid 20px #fff; }
+  section#info_poster .container {
+    background-color: #fafafa; }
+    section#info_poster .container img {
+      width: 100%; }
